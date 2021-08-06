@@ -45,49 +45,42 @@ $subjectArray = array("hardwareSupport", "softwareSupport", "other");
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hackers Poulette ™</title>
-    <style>
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .formContainer {
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      padding: 20px;
-      max-width: 50%;
-      } 
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bellota:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-<h2>Contact Form</h2>
+<!-- <h2>Contact Form</h2> -->
 
-<div class="formContainer">
+<div class="container">
   <form method="post" action="form.php" id="contact-form">
-      <label for="firstName">First name:</label>
+  <label class="div1" for="firstName">First name:</label>
         <input type="text" name="firstName" placeholder="Your name..." required>
         <?php
           sanitizeNames("firstName", "first name", "UTF-8");
           verificationNames("firstName", "first name", "UTF-8");
           $firstName = $_POST["firstName"];
           $firstNamePass = !empty($firstName) ? true : false;
-        ?><br><br>
-      <label for="lastName">Last name:</label>
+        ?>
+      <div class="div2"><label for="lastName">Last name:</label>
         <input type="text" name="lastName" placeholder="Your last name..." required>
         <?php
           sanitizeNames("lastName", "last name", "UTF-8");
           verificationNames("lastName", "last name", "UTF-8");
           $lastName = $_POST["lastName"];
           $lastNamePass = !empty($lastName) ? true : false;
-        ?><br><br>
-      <label for="email">Email:</label>
+        ?> </div>
+      <div class="div3"><label for="email">Email:</label>
         <input type="email" name="email" placeholder="Your email..." required>
         <?php
         sanitizeEmail("UTF-8");
         verificationEmail();
         $email = $_POST["email"];
         $emailPass = !empty($email) ? true : false;
-        ?><br><br>
-      <label for="country">Country:</label>
+        ?></div>
+      <div class="div4"><label for="country">Country:</label>
       <select id="country" name="country" required>
         <option value="" disabled selected>Select your country...</option>
         <option value="Afganistan">Afghanistan</option>
@@ -341,8 +334,8 @@ $subjectArray = array("hardwareSupport", "softwareSupport", "other");
         verificationArray($countriesArray, "country", "UTF-8");
         $country = $_POST["country"];
         $countryPass = !empty($country) ? true : false;
-        ?><br>
-      <label for="subject"><br>Subject:<br></label><br>
+        ?> </div>
+      <div class="div5"><label for="subject"><br>Subject:<br></label><br>
         <label for="subject">Hardware Support</label>
             <input type="radio" name="subject" value="hardwareSupport">
         <label for="subject">Software Support</label>
@@ -353,16 +346,16 @@ $subjectArray = array("hardwareSupport", "softwareSupport", "other");
           verificationArray($subjectArray, "subject", "UTF-8");
           $subject = $_POST["country"];
           $subjectPass = !empty($subject) ? true : false;
-        ?><br><br><br>
-      <label for="message">Message:</label><br>
+        ?></div>
+      <div class="div6"><label for="message">Message:</label><br>
         <textarea  name="message" placeholder="Write your message here..." style="height:200px;width:500px;max-width:80%" required></textarea><br>
         <?php
           sanitizeTextBox("message", "UTF-8");
           verificationTextBox("message");
           $message = $_POST["message"];
           $messagePass = !empty($message) ? true : false;
-        ?><br><br>
-        <input type="submit" name="submit" value="Submit">
+        ?></div>
+        <div class="div7"><input type="submit" name="submit" value="Submit"></div>
   </form>
 </div>
 </body>
