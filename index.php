@@ -38,6 +38,11 @@ $subjectArray = array("hardwareSupport", "softwareSupport", "other");
 
 ?>
 
+  
+  
+  
+  
+</div>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -49,14 +54,26 @@ $subjectArray = array("hardwareSupport", "softwareSupport", "other");
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bellota:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
 </head>
 <body>
+<header>
+<div class="row"> <!-- here i'm addind the classes "float-1" or "flex-1" for each of the two examples -->
+      <div class="center">
+        <img src="assets/img/hackers-poulette-logo.png" alt="Hacker poulette logo">
+        <h1>Technical Support</h1>
+      </div>
 
-<!-- <h2>Contact Form</h2> -->
+</div>
 
+
+
+</header>
 <div class="container">
   <form method="post" action="index.php" id="contact-form">
-  <label class="div1" for="firstName">First name:</label>
+  <ul class="flex-outer">
+    <li>
+      <label  for="firstName">First name:</label>
         <input type="text" name="firstName" placeholder="Your name..." required>
         <?php
           sanitizeNames("firstName", "first name", "UTF-8");
@@ -64,6 +81,8 @@ $subjectArray = array("hardwareSupport", "softwareSupport", "other");
           $firstName = $_POST["firstName"];
           $firstNamePass = !empty($firstName) ? true : false;
         ?>
+    </li>
+    <li>
       <label for="lastName">Last name:</label>
         <input type="text" name="lastName" placeholder="Your last name..." required>
         <?php
@@ -71,16 +90,20 @@ $subjectArray = array("hardwareSupport", "softwareSupport", "other");
           verificationNames("lastName", "last name", "UTF-8");
           $lastName = $_POST["lastName"];
           $lastNamePass = !empty($lastName) ? true : false;
-        ?> </div>
-      <div class="div3"><label for="email">Email:</label>
+        ?>
+    </li>
+    <li>
+      <label for="email">Email:</label>
         <input type="email" name="email" placeholder="Your email..." required>
         <?php
         sanitizeEmail("UTF-8");
         verificationEmail();
         $email = $_POST["email"];
         $emailPass = !empty($email) ? true : false;
-        ?></div>
-      <div class="div4"><label for="country">Country:</label>
+        ?>
+    </li>
+    <li>
+      <label for="country">Country:</label>
       <select id="country" name="country" required>
         <option value="" disabled selected>Select your country...</option>
         <option value="Afganistan">Afghanistan</option>
@@ -334,30 +357,47 @@ $subjectArray = array("hardwareSupport", "softwareSupport", "other");
         verificationArray($countriesArray, "country", "UTF-8");
         $country = $_POST["country"];
         $countryPass = !empty($country) ? true : false;
-        ?> </div>
-      <div class="div5"><label for="subject"><br>Subject:<br></label><br>
-        <label for="subject">Hardware Support</label>
-            <input type="radio" name="subject" value="hardwareSupport">
-        <label for="subject">Software Support</label>
-            <input type="radio" name="subject" value="softwareSupport">
-        <label for="subject">Other</label>
-            <input type="radio" name="subject" value="other" checked="checked"><br>
-        <?php
-          verificationArray($subjectArray, "subject", "UTF-8");
-          $subject = $_POST["country"];
-          $subjectPass = !empty($subject) ? true : false;
-        ?></div>
-      <div class="div6"><label for="message">Message:</label><br>
+        ?>
+    </li>
+    <li>
+      <label for="subject">Subject:</label>
+      <ul class="flex-inner">
+        <li>
+          <label for="subject">Hardware Support</label>
+              <input type="radio" name="subject" value="hardwareSupport">
+        </li>
+        <li>
+          <label for="subject">Software Support</label>
+              <input type="radio" name="subject" value="softwareSupport">
+        </li>
+        <li>
+          <label for="subject">Other</label>
+              <input type="radio" name="subject" value="other" checked="checked">
+          <?php
+            verificationArray($subjectArray, "subject", "UTF-8");
+            $subject = $_POST["country"];
+            $subjectPass = !empty($subject) ? true : false;
+          ?>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <label for="message">Message:</label>
         <textarea  name="message" placeholder="Write your message here..." style="height:200px;width:500px;max-width:80%" required></textarea><br>
         <?php
           sanitizeTextBox("message", "UTF-8");
           verificationTextBox("message");
           $message = $_POST["message"];
           $messagePass = !empty($message) ? true : false;
-        ?></div>
-        <div class="div7"><input type="submit" name="submit" value="Submit"></div>
+        ?>
+    </li>
+    <li>
+        <input type="submit" name="submit" value="Submit">
+    </li>
   </form>
 </div>
+<footer class="footer">
+</footer>
 </body>
 </html>
 
