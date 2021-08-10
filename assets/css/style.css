@@ -10,7 +10,8 @@ body {
 
 h1 {
   font-family: 'Bellota', cursive;
-  font-size: 10px;
+  font-size: 30px;
+  padding-bottom: 20px;
 }
 
 .footer {
@@ -34,6 +35,9 @@ input[type=submit] {
 
 input[type=radio] {
   cursor: pointer;
+  display: inline-block;
+  width: 50px;
+  position: relative;
 }
 
 #country {
@@ -42,6 +46,7 @@ input[type=radio] {
 
 .container {
   margin: auto;
+  min-width: 200px;
   width: 50%;
   border: 2px solid #303030;
   padding: 10px;
