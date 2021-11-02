@@ -1,6 +1,5 @@
 
-<img src="https://img.shields.io/badge/USES-HTML-blue?style=for-the-badge">
-<img src="https://img.shields.io/badge/USES-CSS-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/USES-HTML-blue?style=for-the-badge"><img src="https://img.shields.io/badge/USES-CSS-blue?style=for-the-badge">
 <img src="https://img.shields.io/badge/USES-SASS-blue?style=for-the-badge">
 <img src="https://img.shields.io/badge/MADE_WITH-PHP-blue?style=for-the-badge">
 
