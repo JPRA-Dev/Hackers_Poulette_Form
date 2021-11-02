@@ -1,6 +1,5 @@
 
-<img src="https://img.shields.io/badge/USES-HTML-blue?style=for-the-badge"> 
-<img src="https://img.shields.io/badge/USES-CSS-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/USES-HTML-blue?style=for-the-badge"> <img src="https://img.shields.io/badge/USES-CSS-blue?style=for-the-badge">
 <img src="https://img.shields.io/badge/USES-SASS-blue?style=for-the-badge">
 <img src="https://img.shields.io/badge/MADE%20WITH-PHP-brightgreen?style=for-the-badge">
 
@@ -19,21 +18,19 @@ It had to display a contact form and process the received answer (sanitize, vali
 João Andrade => Junior Web Developer @Becore.org
 
 ## Link
-https://jpra-dev.github.io/Hangman/
+https://hackers-poulette-jpandradedev.herokuapp.com/
 
 
 ## Functionalities
-- Gets info from user;
-- Helps user giving hints;
-- Gives instructions;
-- Counts lifes;
-- Changes image according to the remaining lifes;
-- Shows how many words are left to guess;
-- Fully responsive for little screens;
-- Congratulates the user if he guesses one letter;
-- Congratulates the user if he wins;
-- Button to reset the game.
+###The form should be comprised of:
+- Name and lastname
+- Gender
+- Email address
+- Country
+- Subject (3 possibilities)
+- Message
+
 
 
 ## Versioning 
-version : V-002
+version : V-003
