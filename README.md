@@ -10,7 +10,8 @@
 
 ## General informations 
 Title       : Hackers Poulette "Contact Support From"  
-Description : The objective of this project is to "non-identically" reproduce the Pinterest platform.
+Description : The company Hackers Poulette ™ sells Raspberry Pi accessory kits to build your own. They want to allow their users to contact their support team. My mission was to create a fully-functioning online "contact support" form, in PHP.
+It had to display a contact form and process the received answer (sanitize, validate, answer the user).
 
 
 ## Author
@@ -18,7 +19,7 @@ João Andrade => Junior Web Developer @Becore.org
 
 
 ## Link
-https://jimageshare.herokuapp.com/
+https://hackers-poulette-jpandradedev.herokuapp.com/
 
 
 ## Functionalities
