@@ -22,7 +22,7 @@ https://hackers-poulette-jpandradedev.herokuapp.com/
 
 
 ## Functionalities
-###The form should be comprised of:
+The form should be comprised of:
 - Name and lastname
 - Gender
 - Email address
@@ -32,5 +32,5 @@ https://hackers-poulette-jpandradedev.herokuapp.com/
 
 
 
-## Versioning 
+## Version 
 version : V-003
