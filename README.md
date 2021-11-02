@@ -30,6 +30,14 @@ The form should be comprised of:
 - Subject (3 possibilities)
 - Message
 
+Must have:
+- the form's html code must be semantically valid
+- the HTML must be accessible to blind people
+- in case of wrong input, the form should display a useful visual clue about the error
+- display the error message near the correct input field
+- the error message must be readable (helpful to users)
+- the form has to be sanitised and validated (server side)
+- if all required inputs are valid, the script should respond by email to a given address (it doesn't because I did remove the main email that I was using after)
 
 
 ## Version 
