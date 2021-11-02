@@ -1,7 +1,8 @@
-[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
+
+<img src="https://img.shields.io/badge/USES-HTML-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/USES-CSS-blue?style=for-the-badge">
 <img src="https://img.shields.io/badge/USES-SASS-blue?style=for-the-badge">
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+<img src="https://img.shields.io/badge/MADE_WITH-PHP-blue?style=for-the-badge">
 
 
 # Hackers_Poulette_Form
